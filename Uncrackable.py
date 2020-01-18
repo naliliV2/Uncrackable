@@ -14,10 +14,9 @@
 #       Date: 12/31/2019  #
 ###########################  
 
-
 import random
 
-def random_number(nomber, dificulty): 
+def random_number(nomber, dificulty): #Create a random password
     list_random=[]
     for loop in range(nomber):
         if dificulty==0:
@@ -28,8 +27,8 @@ def random_number(nomber, dificulty):
             list_random.append(round(random.uniform(0, 100))) #a,b,c[...]?,;,.  # \ is impossible beacause ("\") is impossible
     return list_random
 
-def change(rn):
-    password=[] #Defined password 
+def change(rn): #Transform a number in caracter of your password (Exemple : 25 = Y)
+    password=[] 
     for loop in range(len(list_random)):
         test=rn.pop(0)
         if test>=1 and test<=50: #Optimisation
@@ -246,14 +245,14 @@ def change(rn):
                     password.append("<")
     return password
 
-def correction(list_letter):
+def correction(list_letter): #Transform list in strings
     list_letter0=""
     for loop in range(len(list_letter)):
         x=list_letter.pop(0)
         list_letter0+=x 
     return list_letter0
 
-print("How many characters should your password contain?")
+print("How many characters should your password contain?") #Question
 i0=int(input(">>> "))
 print("Which security level would you like for your password")
 print("0 (Easy) : Only a letters")
@@ -261,9 +260,9 @@ print("1 (Medium) : A letters and a numbers")
 print("2 (Hard) : A letters, a numbers and specials caracter")
 i1=int(input(">>> "))
 
-list_random=random_number(i0, i1)
+list_random=random_number(i0, i1) 
 list_letter=change(list_random)
 pw0=correction(list_letter)
 
 print(pw0)
-input("Puss ENTER for close the program")
+input("Puss ENTER for close the program") #End program 
