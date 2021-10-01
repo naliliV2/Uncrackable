@@ -11,8 +11,8 @@
 #  Optimized by SH4FS0c13ty.                                                                                                                     #
 ##################################################################################################################################################
 # Information:            #
-#       Version: V1.1     #
-#       Date: 02/09/2020  #
+#       Version: V1.2     #
+#       Date: 01/10/2021  #
 ###########################  
 
 import random
@@ -21,9 +21,9 @@ def random_number(length, strength): # Generate random numbers that will be used
     list_random = []
     for i in range(0, length):
         if strength == 1:
-            list_random.append(random.randint(0, 52)) # Alphabetic characters [a-Z]
+            list_random.append(random.randint(0, 51)) # Alphabetic characters [a-Z]
         elif strength == 2:
-            list_random.append(random.randint(0, 62)) # Alphanumerical characters [A-Z0-9]
+            list_random.append(random.randint(0, 61)) # Alphanumerical characters [A-Z0-9]
         elif strength == 3:
             list_random.append(random.randint(0, 102)) # Alphanumerical + special characters [a-Z0-9&é"'(-è_çà)=~#{[|`\^@]}°+^$ù*,;:!¨£%µ?./§]
     return list_random
